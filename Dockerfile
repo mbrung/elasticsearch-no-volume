@@ -64,6 +64,8 @@ RUN set -ex; \
 		elasticsearch -v; \
 	fi
 
+RUN ["plugin","install","http://xbib.org/repository/org/xbib/elasticsearch/plugin/elasticsearch-knapsack/2.3.4.0/elasticsearch-knapsack-2.3.4.0-plugin.zip"]
+
 COPY config ./config
 
 COPY docker-entrypoint.sh /
